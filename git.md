@@ -23,6 +23,7 @@ git branch -a (-a 包括远程的)
 
 git pull --rebase
 如果遇到冲突，请仔细看提示
+
 1.解决冲突，并 add 冲突的文件
 2.继续 rebase 
 git rebase --continue
