@@ -42,3 +42,6 @@ git checkout -b new_branch commit_id
 * 拉取远程所有分支列表
 
 git remote update origin --prune
+
+* checkout out 远程分支到本地
+git checkout -b local_name origin/branch_name
