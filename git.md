@@ -38,3 +38,7 @@ git push
 * 以某次 commit id 拉分支
 
 git checkout -b new_branch commit_id
+
+* 拉取远程所有分支列表
+
+git remote update origin --prune
