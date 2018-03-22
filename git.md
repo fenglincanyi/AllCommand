@@ -44,4 +44,12 @@ git checkout -b new_branch commit_id
 git remote update origin --prune
 
 * checkout out 远程分支到本地
+
 git checkout -b local_name origin/branch_name
+
+* checkout 以tag checkout 一个新的分支
+git checkout -b local_name tagname
+
+
+
+
