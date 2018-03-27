@@ -28,10 +28,11 @@ git pull --rebase
 2.继续 rebase 
 git rebase --continue
 
-* git cherry-pick 
+* git cherry-pick 的使用
 
 查询出有用的 commit id
 切换到当前需要的分支上
+
 git cherry-pick commit id  自动 commit 
 git push 
 
@@ -48,8 +49,19 @@ git remote update origin --prune
 git checkout -b local_name origin/branch_name
 
 * checkout 以tag checkout 一个新的分支
+
 git checkout -b local_name tagname
 
+* 打某次commit-id 的 patch
 
+git format-patch commit-id
+
+* 打某次commit-id及之前的几次 patch (如：3次之前)
+
+git format-patch commit-id -3     
+
+* 打某2次之前的提交的patch(commit-id1较早的时间点，commit-id2较晚的时间点)
+
+git format-patch commit-id1..commit-id2
 
 
