@@ -5,7 +5,7 @@
 | git show commit-id , git diff commit-id^! |  查询某次 commit 的更改信息|
 |git log -n| 查询最近 n 次 提交|
 |git branch -a (-a 包括远程的)| 列出所有分支|
-|git pull --rebase; git rebase --continue| rebase 相关; 
+|git pull --rebase; \ngit rebase --continue| rebase 相关; 
 如果遇到冲突，请仔细看提示
 1.解决冲突，并 add 冲突的文件
 2.继续 rebase |
