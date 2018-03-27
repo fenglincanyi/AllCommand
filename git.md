@@ -1,23 +1,10 @@
-* 新建一个分支
-
-git checkout -b name
-
-* 查询最近一次 commit id （短：--short）
-
-git rev-parse --short HEAD  
-
-* 查询某次 commit 的更改信息
-
-git show commit-id
-git diff commit-id^!
-
-* 查询最近 n 次 提交
-
-git log -n
-
-* 列出所有分支
-
-git branch -a (-a 包括远程的)
+| 命令      |     说明 |
+| :-------- | --------:|
+| git checkout -b name   |   新建一个分支|
+| git rev-parse --short HEAD  |  查询最近一次 commit id （短：--short）|
+| git show commit-id , git diff commit-id^! |  查询某次 commit 的更改信息|
+|git log -n| 查询最近 n 次 提交|
+|git branch -a (-a 包括远程的)| 列出所有分支|
 
 * rebase 相关
 
