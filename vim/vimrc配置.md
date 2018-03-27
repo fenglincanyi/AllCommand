@@ -1,3 +1,4 @@
+```shell
 "设置vundle
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -95,5 +96,4 @@ function! ClosePair(char)
                 return a:char  
     endif  
 endfunction 
-
-
+```
