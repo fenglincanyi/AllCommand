@@ -13,4 +13,4 @@
 |git checkout -b local_name tag_name | 以tag来 checkout 一个新的分支|
 |git format-patch commit-id |  打某次commit-id 的 patch|
 |git format-patch commit-id -3   |  打某次commit-id及之前的几次 patch (如：3次之前)|
-|git format-patch commit-id1..commit-id2   |  打某2次之前的提交的patch(commit-id1较早的时间点，commit-id2较晚的时间点)|
+|git format-patch commit-id1..commit-id2   |  打某2次之间的提交的patch(commit-id1较早的时间点，commit-id2较晚的时间点)|
