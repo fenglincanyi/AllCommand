@@ -7,7 +7,8 @@
 |git log -p| 查询最近提交的完整历史，带有diff|
 |git branch -a (-a 包括远程的)| 列出所有分支|
 |git pull --rebase; <br>git rebase --continue | rebase 相关:<br> 如果遇到冲突，请仔细看提示<br>1.解决冲突，并 add 冲突的文件<br>2.继续 rebase |
-| git cherry-pick commit-id  会自动commit;<br>git push | git cherry-pick 的使用:<br>1.查询出有用的 commit-id<br>2.切换到当前需要的分支上 |
+| git cherry-pick commit-id  | git cherry-pick 的使用:<br>1.查询出有用的 commit-id<br>2.切换到当前需要的分支上 |
+| git cherry-pick commit-id_old..commit-id_new (短id也可以)  | 多个连续的commit进行cherry-pick |
 |git checkout -b new_branch commit_id | 以某次 commit id 拉分支|
 |git fetch | 更新本地branch列表|
 |git checkout -b local_name origin/branch_name | checkout out 远程分支到本地|
