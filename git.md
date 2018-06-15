@@ -17,4 +17,5 @@
 |git format-patch commit-id -3   |  打某次commit-id及之前的几次 patch (如：3次之前)|
 |git format-patch commit-id1..commit-id2   |  打某2次之间的提交的patch(commit-id1较早的时间点，commit-id2较晚的时间点)|
 |git format-patch commit-id1^ commit-id2 > xxx.patch  |  比较2次之间的提交的patch, 写入到xxx.patch文件中|
+|git apply xxx.patch  |  应用patch|
 |git reflog (show branch_name)  | 查询分支的来源(加 show,查看某个分支的reflog)|
