@@ -30,4 +30,5 @@ u0_a1118     16885 16900  1049 2064112 196232 0                   0 S Binder:168
 ```
 
 * systrace 使用
-python systrace.py --time=监控时长  -a 进程名 -o 输出文件 gfx input view webview wm am audio video camera hal  res dalvik rs sched freq idle load
+
+`python systrace.py --time=监控时长  -a 进程名 -o 输出文件 gfx input view webview wm am audio video camera hal  res dalvik rs sched freq idle load`
