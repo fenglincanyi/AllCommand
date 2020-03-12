@@ -1,6 +1,10 @@
 * 启动app的某个activity
 
 adb shell am start -a android.intent.action.VIEW -d "schema://path"
+
+启动app的某个activity，并携带参数
+
+adb shell am start -a android.intent.action.VIEW -d "schema://path?param1=abcd'&'param2=12'&'param3=cdef"
 * 查看app的线程情况
 
 adb shell ps -T|grep 包名
