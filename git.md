@@ -19,3 +19,36 @@
 |git format-patch commit-id1^ commit-id2 > xxx.patch  |  比较2次之间的提交的patch, 写入到xxx.patch文件中|
 |git apply xxx.patch  |  应用patch|
 |git reflog (show branch_name)  | 查询分支的来源(加 show,查看某个分支的reflog)|
+
+
+
+
+git reabse 简单使用说明：
+分支：master
+分支：feature_a, 从 master 拉出来的
+
+1. 确保本地 master最新：
+本地切换至：master，并pull
+git pull --rebase
+(如果使用 git pull, 远程master合并到本地master，会多一条merge commit)
+
+2. 切分支到：feature_a：  
+确保是最新的：git pull reabse
+合代码： git rebase master
+
+3. 如果遇到冲突：
+报错：xxxx，那就解决冲突, 
+解决完，git add . 
+
+4. 完成后续的 rebase操作：
+git rebase --continue
+
+5. push 新feature
+当前分支：分支：feature_a，
+git push 
+
+
+---
+其他：
+* 如果想要放弃本次变基：git rebase --abort
+* 如果是2个 feature分支，那建议还是
