@@ -85,7 +85,7 @@ set confirm
 autocmd VimEnter * NERDTree
 
 " 关闭 vim 的时候如果只剩下 NERDTree, 那么自动关闭 NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
 
 " 将 NERDTree 的窗口设置在 ddvim 窗口的右侧（默认为左侧）
 " let NERDTreeWinPos="right"
