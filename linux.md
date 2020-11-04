@@ -1,5 +1,5 @@
 * 查找 文件名 xxx 
-find / -name 'java' -type d    查找'java'
+`find / -name 'java' -type d    查找'java'`
 
 * 打开findler
 open path
