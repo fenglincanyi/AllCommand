@@ -28,6 +28,7 @@
 * 查看Java安装路径
 
 `which java`
+
 `ls -l /usr/bin/java`
 
 ``` bash
