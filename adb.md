@@ -37,6 +37,9 @@ u0_a1118     16885 16900  1049 2064112 196232 0                   0 S Binder:168
 
 adb shell am set-debug-app -w 包名
 
+adb shell am clear-debug-app
+
+
 https://droidyue.com/blog/2017/05/14/a-little-but-useful-debug-skill_for_android/
 
 
