@@ -60,6 +60,11 @@ zsh: no matches found: *:W
 adb logcat -v color
 ```
 
+* adb 清除缓存，从当前日志开始shuc
+```shell
+adb logcat -c && adb logcat
+```
+
 编辑vim ~/.zshrc,增加配置：setopt no_nomatch，生效：source ~/.zshrc
 
 * systrace 使用
