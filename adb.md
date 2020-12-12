@@ -1,3 +1,5 @@
+文档：<https://developer.android.com/studio/command-line/logcat?hl=zh-cn>
+
 * 启动app的某个activity
 
 adb shell am start -a android.intent.action.VIEW -d "schema://path"
@@ -50,6 +52,12 @@ zsh报错：
 
 ```shell
 zsh: no matches found: *:W
+```
+
+* adb输出显示颜色
+
+```shell
+adb logcat -v color
 ```
 
 编辑vim ~/.zshrc,增加配置：setopt no_nomatch，生效：source ~/.zshrc
