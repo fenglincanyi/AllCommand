@@ -42,6 +42,17 @@ adb shell am clear-debug-app
 
 https://droidyue.com/blog/2017/05/14/a-little-but-useful-debug-skill_for_android/
 
+* adb 过滤日志
+
+adb logcat *:W  (warining级别以上的日志)
+
+zsh报错：
+
+```shell
+zsh: no matches found: *:W
+```
+
+编辑vim ~/.zshrc,增加配置：setopt no_nomatch，生效：source ~/.zshrc
 
 * systrace 使用
 
