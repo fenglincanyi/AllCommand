@@ -10,7 +10,7 @@
 
 `diff path1 path2`
 
-`diff -y --suppress-common-lines path1 path2` 仅显示diff部分
+`diff -y --suppress-common-lines path1 path2 | colordiff` 仅显示diff部分
 
 `vimdiff path1 path2`
 
