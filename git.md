@@ -52,3 +52,8 @@ git push
 其他：
 * 如果想要放弃本次变基：git rebase --abort
 * 如果是2个 feature分支，那建议还是
+
+
+
+<br>**文档**：
+https://mp.weixin.qq.com/s/-GM2_wklRyv-j1Go1BbEpw
