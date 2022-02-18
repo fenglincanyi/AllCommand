@@ -73,6 +73,14 @@ adb logcat -c && adb logcat -v color | grep " E "
 
 adb logcat -c && adb logcat -v color | grep "app_name"
 ```
+android studio Terminal 中执行adb logcat *:S 报错
+zsh: no matches found: *:S
+因为zsh缺省情况下始终自己解释这个*:S，而不会传递给adb logcat来解释
+在~/.zshrc中加入:
+setopt no_nomatch
+然后执行命令
+
+source .zshrc
 
 
 * systrace 使用
