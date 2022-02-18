@@ -44,7 +44,7 @@ adb shell am clear-debug-app
 
 https://droidyue.com/blog/2017/05/14/a-little-but-useful-debug-skill_for_android/
 
-* adb 过滤日志
+* adb 过滤日志（https://developer.android.com/studio/command-line/logcat?hl=zh-cn#formatmodify）
 
 adb logcat *:W  (warining级别以上的日志)
 
