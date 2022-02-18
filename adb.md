@@ -67,6 +67,14 @@ adb logcat -c && adb logcat
 
 编辑vim ~/.zshrc,增加配置：setopt no_nomatch，生效：source ~/.zshrc
 
+* 过滤
+```shell
+adb logcat -c && adb logcat -v color | grep " E "
+
+adb logcat -c && adb logcat -v color | grep "app_name"
+```
+
+
 * systrace 使用
 
 `python systrace.py --time=监控时长  -a 进程名 -o 输出文件 gfx input view webview wm am audio video camera hal  res dalvik rs sched freq idle load`
