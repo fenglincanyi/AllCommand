@@ -8,10 +8,67 @@ SELECT
     t0.*
     ,t1.`(os|ab_info)?+.+` -- 去掉os和ab_info字段
     ,t2.`(os)?+.+`  -- 去掉os字段
-    from table_a
+    FROM table_a
 ```
 
 
 ## SQL函数
 * MAX(Column)  多个取任意一个
 * COALESCE(c1, c2)  多个字段中，取不为空的，如果2个都不为空，则取第一个，COALESCE(t1.column,t2.column) AS column_merge
+* 去极值：PERCENT_RANK() OVER (partition by bucket_info ORDER BY cm_pay_amt DESC ) as myrank
+```sql
+SELECT
+    bucket_info,
+    COUNT(DISTINCT order_id) ordernum,
+    COUNT(DISTINCT uesr_id) buyuv,
+    SUM(pay_amt) payAll,
+    COUNT(
+        DISTINCT order_id,
+        IF(myrank > 0.001, TRUE, NULL)
+    ) ordernum2,
+    COUNT(
+        DISTINCT uesr_id,
+        IF(myrank > 0.001, TRUE, NULL)
+    ) buyuv2,
+    SUM(IF(myrank > 0.001, pay_amt, 0)) payall_2
+FROM
+    (
+        select
+            bucket_info,
+            uesr_id,
+            order_id,
+            pay_amt,
+            PERCENT_RANK() OVER (
+                partition by bucket_info
+                ORDER BY
+                    pay_amt DESC
+            ) as myrank
+        FROM
+            (
+                SELECT
+                    uesr_id,
+                    order_id,
+                    pay_amt
+                FROM
+                    table1
+                WHERE
+                    ds = '${bizdate}'
+                    AND cm_pay_num > 0
+                GROUP BY
+                    uesr_id,
+                    order_id,
+                    pay_amt
+            ) aa
+            LEFT JOIN (
+                SELECT
+                    user_id,
+                    MAX(bucket_info) AS bucket_info
+                FROM
+                    table2
+                WHERE
+                    ds = '${bizdate}'
+                GROUP BY
+                    user_id
+            ) bb ON bb.user_id = aa.uesr_id
+    )
+```
