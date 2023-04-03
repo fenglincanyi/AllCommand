@@ -13,4 +13,5 @@ SELECT
 
 
 ## SQL函数
-* 多个取任意一个：MAX(Column)
+* MAX(Column)  多个取任意一个
+* COALESCE(c1, c2)  多个字段中，取不为空的，如果2个都不为空，则取第一个，COALESCE(t1.column,t2.column) AS column_merge
