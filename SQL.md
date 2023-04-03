@@ -19,8 +19,6 @@ SELECT
 ```sql
 SELECT
     bucket_info,
-    COUNT(DISTINCT order_id) ordernum,
-    COUNT(DISTINCT uesr_id) buyuv,
     SUM(pay_amt) payAll,
     COUNT(
         DISTINCT order_id,
@@ -44,31 +42,6 @@ FROM
                     pay_amt DESC
             ) as myrank
         FROM
-            (
-                SELECT
-                    uesr_id,
-                    order_id,
-                    pay_amt
-                FROM
-                    table1
-                WHERE
-                    ds = '${bizdate}'
-                    AND cm_pay_num > 0
-                GROUP BY
-                    uesr_id,
-                    order_id,
-                    pay_amt
-            ) aa
-            LEFT JOIN (
-                SELECT
-                    user_id,
-                    MAX(bucket_info) AS bucket_info
-                FROM
-                    table2
-                WHERE
-                    ds = '${bizdate}'
-                GROUP BY
-                    user_id
-            ) bb ON bb.user_id = aa.uesr_id
+            table_1
     )
 ```
