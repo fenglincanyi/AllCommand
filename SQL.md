@@ -27,7 +27,6 @@ SELECT
 ## SQL函数
 * MAX(Column)  多个取任意一个
 * COALESCE(c1, c2)  多个字段中，取不为空的，如果2个都不为空，则取第一个，COALESCE(t1.column,t2.column) AS column_merge
-* 条件查询
 * 去极值：PERCENT_RANK() OVER (partition by bucket_info ORDER BY cm_pay_amt DESC ) as myrank
 ```sql
 SELECT
