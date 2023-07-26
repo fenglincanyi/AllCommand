@@ -1,8 +1,6 @@
 文档：<https://developer.android.com/studio/command-line/logcat?hl=zh-cn>
 
 
-* gradle任务查看其子依赖任务，不会真正执行会skip
-<br>`./gradlew clean :module_name:podInstall -m`
 
 * 启动app的某个activity
 
