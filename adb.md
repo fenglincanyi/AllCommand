@@ -81,6 +81,8 @@ adb logcat -c && adb logcat
 ```shell
 adb logcat -c && adb logcat -v color | grep " E "
 
+adb logcat -c && adb logcat -v color *:E
+
 adb logcat -c && adb logcat -v color | grep "app_name"
 ```
 android studio Terminal 中执行adb logcat *:S 报错
