@@ -38,6 +38,9 @@ u0_a1118     16885 16900  1049 2064112 196232 0                   0 S Binder:168
 ➜  [/Users/geng] adb shell ps -T | grep u0_a1118 -c
 225
 ```
+* grep 过滤日志 或的关系
+
+` adb logcat -c && adb logcat -v color | grep -E "AAA|BBB" `
 
 * 启动debug
 
