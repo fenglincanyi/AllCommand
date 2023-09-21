@@ -9,6 +9,18 @@ WHERE   ds = '20230402'
 AND     info = 'xxxx'
 GROUP BY STR_TO_MAP(abc)
 ```
+* case when使用
+```sql
+在使用CASE WHEN语句时，是否需要结合GROUP BY子句取决于你的查询需求。
+如果你想对查询结果进行分组，并在每个组中应用不同的条件逻辑，那么你需要结合GROUP BY子句和CASE WHEN语句来实现。
+以下是一个示例，展示了如何在GROUP BY子句中使用CASE WHEN语句：
+SELECT category, 
+       SUM(CASE WHEN price > 100 THEN 1 ELSE 0 END) AS high_price_count,
+       SUM(CASE WHEN price <= 100 THEN 1 ELSE 0 END) AS low_price_count
+FROM products
+GROUP BY category;
+```
+
 * 条件查询，count统计
 ```sql
 SELECT COUNT(DISTINCT did, IF(a=b,TRUE, NULL)) FROM table1
