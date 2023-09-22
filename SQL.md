@@ -20,6 +20,15 @@ SELECT category,
 FROM products
 GROUP BY category;
 ```
+* IF()巧妙用法，快速分类计数
+```sql
+SELECT  COUNT(DISTINCT IF((arg = 'cccc'),user_id,NULL)) AS expo_uv
+        ,COUNT(DISTINCT 
+              IF((arg = 'aaaa'),user_id,NULL)
+        ) AS click_uv
+FROM    table_a
+WHERE   xxxxxxxxxxx
+```
 
 * 条件查询，count统计
 ```sql
