@@ -20,7 +20,7 @@ SELECT category,
 FROM products
 GROUP BY category;
 ```
-* IF()巧妙用法，快速分类计数
+* IF() 和 DISTINCT 结合 巧妙用法，快速分类计数
 ```sql
 SELECT  COUNT(DISTINCT IF((arg = 'cccc'),user_id,NULL)) AS expo_uv
         ,COUNT(DISTINCT 
