@@ -43,6 +43,9 @@ SELECT
     ,t2.`(os)?+.+`  -- 去掉os字段
     FROM table_a
 ```
+## 特殊内置函数
+* COALESCE：是一个在SQL中常用的函数，用于返回一组表达式中的第一个非NULL值。它接受多个参数，并按照参数的顺序依次判断并返回第一个非NULL值，语法：COALESCE(expression1, expression2, ...)
+<br>其中，expression1、expression2等是要判断的表达式。COALESCE函数会按照参数的顺序依次判断每个表达式，返回第一个非NULL值。如果所有表达式都为NULL，则COALESCE函数返回NULL。
 
 
 ## SQL函数
