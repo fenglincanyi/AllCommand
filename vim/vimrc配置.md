@@ -1,3 +1,6 @@
+1. 先安装Vundle `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+2. 更新 .vimrc 配置文件:
+
 ```shell
 "设置vundle
 set nocompatible              " be iMproved, required
@@ -93,3 +96,5 @@ autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(win
 " 当打开 NERDTree 窗口时，自动显示 Bookmarks
 let NERDTreeShowBookmarks=1
 ```
+
+3. vim进入一个文件，:PluginInstall 指令开始安装配置文件中的插件
