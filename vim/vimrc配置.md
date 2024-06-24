@@ -1,5 +1,5 @@
 1. 先安装Vundle `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-2. 更新 .vimrc 配置文件:
+2. 更新 .vimrc 配置文件,  open ~/.vimrc :
 
 ```shell
 "设置vundle
