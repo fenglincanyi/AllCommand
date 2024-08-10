@@ -1,3 +1,8 @@
+### git ssh配置问题：git操作一直需要输入密码
+在第一次配置git,生成ssh，rsa时，一路回车，不要单独输入密码，去创建就OK
+<br>`ssh-keygen -t rsa -b 4096 -C "xxx@abc.com"`  一路回车，不设置密码
+
+### 常用命令
 | 命令      |     说明 |
 | :-------- | --------:|
 | git checkout -b name   |   新建一个分支|
